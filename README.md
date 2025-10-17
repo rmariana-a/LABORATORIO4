@@ -13,6 +13,8 @@ Desde **Ubuntu**, se accedió al dispositivo empleando el siguiente comando:
 
 `screen /dev/ttyUSB0 9600`
 
+![SC](sudoscreen1.png)
+
 ---
 ### 1.2. Configuración inicial del switch  
 Dentro del modo de configuración, se realizó lo siguiente:  
@@ -23,6 +25,13 @@ Dentro del modo de configuración, se realizó lo siguiente:
 - Creación de la **VLAN 10** y asignación de su configuración correspondiente.  
 
 Esto garantizó la segmentación y correcta comunicación entre los dispositivos conectados al switch.
+
+![SW](switch1.png)
+
+![SW2](switch2.png)
+
+![SW3](switch3.png)
+
 ---  
 
 #### 1.3. Configuración de la Raspberry Pi  
@@ -31,19 +40,29 @@ Se configuró la interfaz de red de la **Raspberry Pi** con una **dirección IP 
 **Configuración en consola:**  
 `sudo nano /etc/dhcpcd.conf`
 
-**Configuración del PC Monitor**
+![raspberry](raspb1.png)
 
+**Configuración del PC Monitor**
 El PC monitor fue configurado con una IP dentro del mismo segmento de red, donde se comprobó la conexión con la Raspberry mediante el comando:`ping <ip_raspberry>`
+
+![ip](ip.png)
+![ping](ping.png)
 
 ### 1.4 Comunicación con el PC del ETM
 Se validó la conectividad entre la Raspberry Pi y el PC del ETM, ejecutando pruebas de ping en ambos sentidos, y esto confirmó la correcta integración de todos los dispositivos dentro de la red local.
 
+![ETM](etm.png)
+
 ### 1.5 Exploración de red con Nmap
 Se realizó un escaneo de red utilizando la herramienta Nmap, con el fin de identificar los dispositivos activos y los puertos abiertos:`nmap -sP 192.168.10.0/24`
+
+![nMap](nmap.png)
 
 ### 1.6 Transferencia de archivos
 
 Se intentó transferir archivos entre los dispositivos usando diferentes puertos (como el 22 para SSH).
+
+![Puerto22](puerto22.png)
 
 **Durante las pruebas se detectó que algunos puertos se encontraban bloqueados, lo que impidió completar ciertas transferencias.**
 
