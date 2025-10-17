@@ -83,6 +83,28 @@ De manera similar, se instaló CentOS como una segunda máquina virtual, complet
 ## 2.3 Instalación de Alpine
 Para Alpine Linux, se utilizó QEMU, en el que los pasos principales fueron:`mkdir alpine_vm` `qemu-img create -f qcow2 alpine.qcow2 2G` `qemu-system-x86_64 -boot d -cdrom alpine.iso -m 512 -hda alpine.qcow2` , y tras la instalación, se configuró el usuario y la red para su correcto funcionamiento.
 
+![ALP](alp.png)
 
+![ALP1](alp1.png)
 
+![ALP2](alp2.png)
 
+ ***Configuración de la interfaz de usuario y disco n°1.**
+ 
+![disc](disco1.png)
+
+***Configuración de la interfaz de usuario y disco n°2.**
+ 
+![disc2](disco2.png)
+
+***Configuración de la interfaz de usuario y disco n°2.**
+ 
+![disc3](disco.3png)
+
+**Descarga Completa**
+
+![FIN](alpfin.png)
+
+## 2.4 Instalación de Scientific Linux
+
+![scl](scl.png)
